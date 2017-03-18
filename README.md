@@ -1,9 +1,8 @@
 # IBMGraphicalDataMapGenerator
-IBM Graphical Data Mapper generation utility to accelerate the creation of map specification language maps based on CSV(XLS) meta-data
+Standalone IBM Graphical Data Mapper generation utility to accelerate the creation of map specification language maps based on transformation meta-data modelled in comma delimited CSV(XLS)files
 #
-Materials being prepared for publication - watch this space
 
-This utility uses the standalone DFDL Java parser to parse a comma delimited (CSV) format file containing the definition of a transformation mapping exercise that needs to be performed. The data in the parsed object is then passed to JAXB code that executes against the IBM GDM XML schema (msl.xsd) to produce an IBM Graphical Data Map 
+This utility uses the standalone DFDL Java parser to parse a comma delimited (CSV) format file containing the definition of a transformation mapping exercise that needs to be performed. The data in the parsed object is then passed to JAXB code that executes against the IBM GDM XML schema (msl.xsd) to produce an IBM Graphical Data Map that can be used in IBM Integration Bus by default. However, if opened in IBM Integration Designer the target runtime can be changed from xquery to XSLT in order to be used with Datapower.(I have not tested against Datapower) 
 
 This utility is a work in progess and at this point in time it will attempt to do the following:
 1) Create basic IBM GDM Maps with a single input and output schema
