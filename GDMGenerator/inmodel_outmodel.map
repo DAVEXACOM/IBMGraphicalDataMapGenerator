@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:MyMapRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" xmlns:ns2="com.codenotfound.jaxb.model" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" targetNamespace="default" version="8.0.5.0" mainMap="true">
+    <documentation description="generated via JAXB map generation API at Fri Oct 28 15:43:04 AEDT 2016"/>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="inmodel_outmodel">
+        <task type="todo">
+            <documentation description="To complete your map add User Defined elements and Transforms"/>
+            <output path="JSON/spath('Data',2)/Title"/>
+        </task>
+    </mappingDeclaration>
+</ns2:MyMapRoot>

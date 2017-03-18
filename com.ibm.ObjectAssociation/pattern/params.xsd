@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema elementFormDefault="unqualified" targetNamespace="com.ibm.ObjectAssociation.pattern" xmlns="com.ibm.ObjectAssociation.pattern" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:simpleType name="Id148671b19c6cfb38f607b03c75c">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216E6F6E65">
+                <xsd:annotation>
+                    <xsd:documentation>None</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321616C6C">
+                <xsd:annotation>
+                    <xsd:documentation>All</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c6b2c88e1bd52b890e">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216E6F6E65">
+                <xsd:annotation>
+                    <xsd:documentation>Transport Default</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321757365726E616D65">
+                <xsd:annotation>
+                    <xsd:documentation>Username</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321757365726E616D65416E6450617373776F7264">
+                <xsd:annotation>
+                    <xsd:documentation>Username + Password</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321582E353039">
+                <xsd:annotation>
+                    <xsd:documentation>X.509 Certificate</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E732153414D4C">
+                <xsd:annotation>
+                    <xsd:documentation>SAML Assertion</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c67e8340855b52f172">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216E6F6E65">
+                <xsd:annotation>
+                    <xsd:documentation>None</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321636F6E74656E74416E6456616C7565">
+                <xsd:annotation>
+                    <xsd:documentation>Content and Value</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321636F6E74656E74">
+                <xsd:annotation>
+                    <xsd:documentation>Content</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c68b907313d6cc3182">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216E6F6E65">
+                <xsd:annotation>
+                    <xsd:documentation>None</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321616C6C">
+                <xsd:annotation>
+                    <xsd:documentation>All</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c6fec75fcd98173cc4">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E732164656661756C74">
+                <xsd:annotation>
+                    <xsd:documentation>Default</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216279557365724964">
+                <xsd:annotation>
+                    <xsd:documentation>By User ID</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321627951756575654F72646572">
+                <xsd:annotation>
+                    <xsd:documentation>By Queue Order</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E732175736572446566696E6564">
+                <xsd:annotation>
+                    <xsd:documentation>User Defined</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c616f0887ee5bc27f">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73214446444C">
+                <xsd:annotation>
+                    <xsd:documentation>DFDL : For binary or text messages with a Data Format Description Language schema model</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321584D4C4E5343">
+                <xsd:annotation>
+                    <xsd:documentation>XMLNSC : For XML messages (namespace aware, validation, low memory use)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321446174614F626A656374">
+                <xsd:annotation>
+                    <xsd:documentation>DataObject : For data from WebSphere Adapters, CORBA and Database records</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73214A534F4E">
+                <xsd:annotation>
+                    <xsd:documentation>JSON : For JavaScript Object Notation messages</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321424C4F42">
+                <xsd:annotation>
+                    <xsd:documentation>BLOB : For messages with an unspecified format</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73214D494D45">
+                <xsd:annotation>
+                    <xsd:documentation>MIME : For MIME wrapped data including multipart</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73214D524D">
+                <xsd:annotation>
+                    <xsd:documentation>MRM : For binary or text messages that are modeled in a message set</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73214A4D534D6170">
+                <xsd:annotation>
+                    <xsd:documentation>JMSMap : For JMS MapMessage messages (XML)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73214A4D5353747265616D">
+                <xsd:annotation>
+                    <xsd:documentation>JMSStream : For JMS StreamMessage messages (XML)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321584D4C4E53">
+                <xsd:annotation>
+                    <xsd:documentation>XMLNS : For XML messages (namespace aware)</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c6be165647566e0ab1">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216175746F6D61746963">
+                <xsd:annotation>
+                    <xsd:documentation>Automatic</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321796573">
+                <xsd:annotation>
+                    <xsd:documentation>Yes</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216E6F">
+                <xsd:annotation>
+                    <xsd:documentation>No</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c6d6e2e276c317e53f">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216465666572726564">
+                <xsd:annotation>
+                    <xsd:documentation>On Demand</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321696D6D656469617465">
+                <xsd:annotation>
+                    <xsd:documentation>Immediate</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321636F6D706C657465">
+                <xsd:annotation>
+                    <xsd:documentation>Complete</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c6242284df22dc7369">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216E6F6E65">
+                <xsd:annotation>
+                    <xsd:documentation>None</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321616C6C">
+                <xsd:annotation>
+                    <xsd:documentation>All</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c68c2f8abcb6b5d6c9">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E7321757365725472616365">
+                <xsd:annotation>
+                    <xsd:documentation>User Trace</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216C6F63616C4572726F72">
+                <xsd:annotation>
+                    <xsd:documentation>Local Error Log</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321657863657074696F6E">
+                <xsd:annotation>
+                    <xsd:documentation>Exception</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E7321657863657074696F6E4C697374">
+                <xsd:annotation>
+                    <xsd:documentation>Exception List</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id148671b19c669eabd2d540e591b">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E7321666C6F77">
+                <xsd:annotation>
+                    <xsd:documentation>Use Pool Associated with Message Flow</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216E6F6465">
+                <xsd:annotation>
+                    <xsd:documentation>Use Pool Associated with Node</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="Id14867788d1d18dee1f67e3065c">
+        <xsd:restriction base="xsd:token">
+            <xsd:enumeration value="5061747465726E73216D6170">
+                <xsd:annotation>
+                    <xsd:documentation>Map</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216573716C">
+                <xsd:annotation>
+                    <xsd:documentation>ESQL</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="5061747465726E73216A617661">
+                <xsd:annotation>
+                    <xsd:documentation>JAVA</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:element name="root" type="Root"/>
+    <xsd:complexType name="Root">
+        <xsd:sequence>
+            <xsd:element default="default" maxOccurs="1" minOccurs="1" name="instanceName" type="xsd:string"/>
+            <!-- Flow Object Search Configuration -->
+            <xsd:element default="5061747465726E73216D6170" maxOccurs="1" minOccurs="1" name="pp1" type="Id14867788d1d18dee1f67e3065c"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

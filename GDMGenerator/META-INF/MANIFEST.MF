@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.7.1
+Created-By: 2.4 (IBM Corporation)
+
+Name: com/ibm/dfdl/dfdlsample_java
+Implementation-Title: dfdlsample_java
+Implementation-Vendor: IBM Corporation
+Implementation-Version: 1.1.0.0 20130607-1207
+Implementation-Copyright: (C) Copyright IBM Corp. 2006, 2013
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<povs xmlns:patterns="http://www.ibm.com/patterns">
+    <simplePov groupId="com.ibm.ObjectAssociation.pattern.instanceName" name="instanceName"/>
+    <simplePov groupId="com.ibm.ObjectAssociation.pattern.Id14868699f59270f17df9e47847b" name="pp1"/>
+    <Group id="com.ibm.ObjectAssociation.pattern.instanceName" visible="false"/>
+    <Group description="description" expand="false" id="com.ibm.ObjectAssociation.pattern.Id14868699f59270f17df9e47847b" name="Id14868699f59270f17df9e47847b" visible="true"/>
+</povs>

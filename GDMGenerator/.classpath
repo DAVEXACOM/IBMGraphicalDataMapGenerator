@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/emf.common_2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/emf.ecore.xmi_2.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/emf.ecore_2.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/gpb.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/ibm-dfdl.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/icu4j.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/icu4j-charsets.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/scd.jar"/>
+	<classpathentry kind="lib" path="C:/Program Files/IBM/IIB/10.0.0.5/server/dfdl/lib/xsd_2.6.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

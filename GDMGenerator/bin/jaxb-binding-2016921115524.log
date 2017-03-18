@@ -1,0 +1,55 @@
+Running command...
+C:\Program Files\IBM\IIB\10.0.0.5\common\jdk\bin\xjc.exe -d "C:\Users\IBM_ADMIN\IBM\IIBT10\DAGDMGenerator\GDMGenerator\src" -p "com.ibm.dfdljaxb.gdmgen" "C:\Users\IBM_ADMIN\IBM\IIBT10\DAGDMGenerator\MapSpecLang\msl.xsd" -b "C:\Users\IBM_ADMIN\IBM\IIBT10\DAGDMGenerator\MapSpecLang\msl_jaxb_bindings.xml" 
+parsing a schema...
+compiling a schema...
+com\ibm\dfdljaxb\gdmgen\Append.java
+com\ibm\dfdljaxb\gdmgen\Assign.java
+com\ibm\dfdljaxb\gdmgen\Cast.java
+com\ibm\dfdljaxb\gdmgen\Code.java
+com\ibm\dfdljaxb\gdmgen\Condition.java
+com\ibm\dfdljaxb\gdmgen\Convert.java
+com\ibm\dfdljaxb\gdmgen\Create.java
+com\ibm\dfdljaxb\gdmgen\Custom.java
+com\ibm\dfdljaxb\gdmgen\CustomFunction.java
+com\ibm\dfdljaxb\gdmgen\DatabaseMapping.java
+com\ibm\dfdljaxb\gdmgen\Documentation.java
+com\ibm\dfdljaxb\gdmgen\Else.java
+com\ibm\dfdljaxb\gdmgen\Expression.java
+com\ibm\dfdljaxb\gdmgen\Field.java
+com\ibm\dfdljaxb\gdmgen\Filter.java
+com\ibm\dfdljaxb\gdmgen\Foreach.java
+com\ibm\dfdljaxb\gdmgen\Function.java
+com\ibm\dfdljaxb\gdmgen\Generation.java
+com\ibm\dfdljaxb\gdmgen\Group.java
+com\ibm\dfdljaxb\gdmgen\If.java
+com\ibm\dfdljaxb\gdmgen\Import.java
+com\ibm\dfdljaxb\gdmgen\Imports.java
+com\ibm\dfdljaxb\gdmgen\InlinedXMLSchema.java
+com\ibm\dfdljaxb\gdmgen\Join.java
+com\ibm\dfdljaxb\gdmgen\Local.java
+com\ibm\dfdljaxb\gdmgen\Lookup.java
+com\ibm\dfdljaxb\gdmgen\Mapping.java
+com\ibm\dfdljaxb\gdmgen\MappingDeclaration.java
+com\ibm\dfdljaxb\gdmgen\MappingDesignator.java
+com\ibm\dfdljaxb\gdmgen\MappingGroup.java
+com\ibm\dfdljaxb\gdmgen\MappingRoot.java
+com\ibm\dfdljaxb\gdmgen\Move.java
+com\ibm\dfdljaxb\gdmgen\Namespace.java
+com\ibm\dfdljaxb\gdmgen\Namespaces.java
+com\ibm\dfdljaxb\gdmgen\ObjectFactory.java
+com\ibm\dfdljaxb\gdmgen\Options.java
+com\ibm\dfdljaxb\gdmgen\Override.java
+com\ibm\dfdljaxb\gdmgen\Param.java
+com\ibm\dfdljaxb\gdmgen\Passthrough.java
+com\ibm\dfdljaxb\gdmgen\Policy.java
+com\ibm\dfdljaxb\gdmgen\Property.java
+com\ibm\dfdljaxb\gdmgen\Remove.java
+com\ibm\dfdljaxb\gdmgen\Sort.java
+com\ibm\dfdljaxb\gdmgen\Submap.java
+com\ibm\dfdljaxb\gdmgen\Task.java
+com\ibm\dfdljaxb\gdmgen\Test.java
+com\ibm\dfdljaxb\gdmgen\Transaction.java
+com\ibm\dfdljaxb\gdmgen\Updates.java
+com\ibm\dfdljaxb\gdmgen\Variable.java
+com\ibm\dfdljaxb\gdmgen\Variables.java
+com\ibm\dfdljaxb\gdmgen\package-info.java

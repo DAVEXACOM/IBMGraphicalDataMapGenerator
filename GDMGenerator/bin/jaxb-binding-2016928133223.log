@@ -1,0 +1,55 @@
+Running command...
+C:\Program Files\IBM\IIB\10.0.0.5\common\jdk\bin\xjc.exe -d "C:\Users\IBM_ADMIN\IBM\IIBT10\DAonlyGDMGenerator\GDMGenerator\src" -p "com.ibm.msl" "C:\Users\IBM_ADMIN\IBM\IIBT10\DAonlyGDMGenerator\MapSpecLang\msl.xsd" -b "C:\Users\IBM_ADMIN\IBM\IIBT10\DAonlyGDMGenerator\MapSpecLang\msl_jaxb_bindings.xml" 
+parsing a schema...
+compiling a schema...
+com\ibm\msl\Append.java
+com\ibm\msl\Assign.java
+com\ibm\msl\Cast.java
+com\ibm\msl\Code.java
+com\ibm\msl\Condition.java
+com\ibm\msl\Convert.java
+com\ibm\msl\Create.java
+com\ibm\msl\Custom.java
+com\ibm\msl\CustomFunction.java
+com\ibm\msl\DatabaseMapping.java
+com\ibm\msl\Documentation.java
+com\ibm\msl\Else.java
+com\ibm\msl\Expression.java
+com\ibm\msl\Field.java
+com\ibm\msl\Filter.java
+com\ibm\msl\Foreach.java
+com\ibm\msl\Function.java
+com\ibm\msl\Generation.java
+com\ibm\msl\Group.java
+com\ibm\msl\If.java
+com\ibm\msl\Import.java
+com\ibm\msl\Imports.java
+com\ibm\msl\InlinedXMLSchema.java
+com\ibm\msl\Join.java
+com\ibm\msl\Local.java
+com\ibm\msl\Lookup.java
+com\ibm\msl\Mapping.java
+com\ibm\msl\MappingDeclaration.java
+com\ibm\msl\MappingDesignator.java
+com\ibm\msl\MappingGroup.java
+com\ibm\msl\MappingRoot.java
+com\ibm\msl\Move.java
+com\ibm\msl\Namespace.java
+com\ibm\msl\Namespaces.java
+com\ibm\msl\ObjectFactory.java
+com\ibm\msl\Options.java
+com\ibm\msl\Override.java
+com\ibm\msl\Param.java
+com\ibm\msl\Passthrough.java
+com\ibm\msl\Policy.java
+com\ibm\msl\Property.java
+com\ibm\msl\Remove.java
+com\ibm\msl\Sort.java
+com\ibm\msl\Submap.java
+com\ibm\msl\Task.java
+com\ibm\msl\Test.java
+com\ibm\msl\Transaction.java
+com\ibm\msl\Updates.java
+com\ibm\msl\Variable.java
+com\ibm\msl\Variables.java
+com\ibm\msl\package-info.java

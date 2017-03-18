@@ -1,0 +1,5 @@
+Input_Model.xsd,inmodel,XMLNSC,Output_Model.xsd,outmodel,XMLNSC
+input1,output1,move,,uppercase
+input2,output1,assign,10,uppercase
+input3,output2,move,10,substring to 20
+

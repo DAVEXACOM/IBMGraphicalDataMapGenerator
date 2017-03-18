@@ -1,0 +1,2 @@
+<% com.ibm.etools.mft.pattern.support.Generation.onGenerate(context, "com.ibm.ObjectAssociation", "Id148670fa0d2bf751bb93051fce6", "Id148670fa0d591b58f8e9fa894b2", "pattern"); %>
+
