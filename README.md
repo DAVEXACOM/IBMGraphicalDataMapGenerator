@@ -15,9 +15,9 @@ The ParseMetaSerialMSL.java class is the executable code and provides demonstrat
 
 ParseMetaSerialMSL.java reads the IOMapModelMetaCSV.xsd (DFDL model) and IOMapModelMeta.csv the source file containing the definitions of the mapping to be performed from the GDMGenerator project. It writes out a inmodel_outmodel.map file. The .map file and the XSDs for the input and output schemas are in the GeneratedMapTargetApp application project.
 
-The IBM Integration Community article "IBM Graphical Data Map (GDM) Generator Tool (Prototype)" has more information on running the tool. See
+The IBM Integration Community article "IBM Graphical Data Map (GDM) Generator Tool (Prototype)" has more information on running the tool. See article at link:
 
-@link to go here@
+https://developer.ibm.com/integration/blog/2017/03/20/ibm-graphical-data-map-gdm-generator-tool-prototype/
 
 There is an ObjectAssociation java project included. This code can be used in conjunction with an IIB Pattern to associate the generate map files with IIB Mapping Nodes in IIB Message flows.
 
