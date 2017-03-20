@@ -25,7 +25,9 @@ import com.ibm.msl.MappingDesignator;
 import com.ibm.msl.MappingRoot;
 import com.ibm.msl.Move;
 import com.ibm.msl.Assign;
+import com.ibm.msl.Function;
 import com.ibm.msl.ObjectFactory;
+import com.ibm.msl.Param;
 import com.ibm.msl.Task;
 import com.ibm.msl.Variable;
 
@@ -61,7 +63,7 @@ public class ParseMetaSerialMSL {
 		/*
 		 * Construct a grammar from a schema file with DFDL annotations 
 		 */
-//		ParseMapMetaData metaData = new ParseMapMetaData(); // Give us a handle for access to the class variables
+		
 		ParseMetaSerialMSL metaData = new ParseMetaSerialMSL(); // Give us a handle for access to the class variables
 		
 		System.out.println("Building grammar");
@@ -304,32 +306,93 @@ public class ParseMetaSerialMSL {
 // @DA  for now if it's not an assign assume a move - for now we only support move and assign
 		
 		if (!(metaData.docHandler.getModel().getFieldMapping().get(i).baseAction).equalsIgnoreCase("move")) 
-		{ // if not a move do an assign
+		{ // if not a move do an assign or concat //@DA2 concat not yet fully implemented
 			
-			// do an Assign to perform the second mapping to output	
-			
-				Assign MyAssign1 = new Assign();
-				Documentation MyAssignDoc1 = new Documentation();
-//@DA			MyAssignDoc1.setDescription("constant value 10"); 
-				MyAssignDoc1.setDescription(metaData.docHandler.getModel().getFieldMapping().get(i).description);
-				MyAssign1.setValue(metaData.docHandler.getModel().getFieldMapping().get(i).assignValue);
-				MyAssign1.setDocumentation(MyAssignDoc1);
-				MappingDesignator MyOutAssignDesignator1 = new MappingDesignator();
+			// do an Assign to perform the mapping to output	
+			if ((metaData.docHandler.getModel().getFieldMapping().get(i).baseAction).equalsIgnoreCase("assign")) 
+			{   // if an assign                                                    
+				Assign MyAssign = new Assign();
+				Documentation MyAssignDoc = new Documentation();
+//@DA			MyAssignDoc.setDescription("constant value 10"); 
+				MyAssignDoc.setDescription(metaData.docHandler.getModel().getFieldMapping().get(i).description);
+				MyAssign.setValue(metaData.docHandler.getModel().getFieldMapping().get(i).assignValue);
+				MyAssign.setDocumentation(MyAssignDoc);
+				MappingDesignator MyOutAssignDesignator = new MappingDesignator();
 								
-//@DA			MyOutAssignDesignator1.setPath("$ComIbmMessageAssembly_outmodel/outmodel/output1"); 
-				MyOutAssignDesignator1.setPath("$ComIbmMessageAssembly_" +metaData.docHandler.getModel().gdmDef.targetMessage+"/"           
+//@DA			MyOutAssignDesignator.setPath("$ComIbmMessageAssembly_outmodel/outmodel/output1"); 
+				MyOutAssignDesignator.setPath("$ComIbmMessageAssembly_" +metaData.docHandler.getModel().gdmDef.targetMessage+"/"           
 		                                                                 +metaData.docHandler.getModel().gdmDef.targetMessage+"/"              
 						                                                 +metaData.docHandler.getModel().getFieldMapping().get(i).targetField);
 
-				MyAssign1.setOutput(MyOutAssignDesignator1);
+				MyAssign.setOutput(MyOutAssignDesignator);
 
-				JAXBElement<Assign> AssignJaxbEl = factory.createAssign(MyAssign1);
+				JAXBElement<Assign> AssignJaxbEl = factory.createAssign(MyAssign);
 						
 				MyMapDecl.getNested().add(AssignJaxbEl);
-			
+				
+			} else // do a concat which is implemented as a function. We will have to use the assignedValue for the second input field
+			{			
+				Function MyFunction = new Function();
+
+				Documentation MyFunctionDoc = new Documentation();
+//@DA			MyMoveDoc.setDescription("uppercase"); 
+				MyFunctionDoc.setDescription(metaData.docHandler.getModel().getFieldMapping().get(i).description);
+				MyFunction.setRef("fn:concat");				
+				MyFunction.setDocumentation(MyFunctionDoc);
+				
+				MappingDesignator MyInpFunctionDesignator = new MappingDesignator();
+				MappingDesignator MyInp2FunctionDesignator = new MappingDesignator();
+
+				MappingDesignator MyOutFunctionDesignator = new MappingDesignator();		
+
+//@DA			MyInpMoveDesignator.setPath("$ComIbmMessageAssembly_inmodel/inmodel/input1"); 
+				MyInpFunctionDesignator.setPath("$ComIbmMessageAssembly_"+metaData.docHandler.getModel().gdmDef.sourceMessage+"/"            
+			                                                         +metaData.docHandler.getModel().gdmDef.sourceMessage+"/"              
+							                                         +metaData.docHandler.getModel().getFieldMapping().get(i).sourceField);		
+					
+				MyFunction.getInput().add(MyInpFunctionDesignator);
+				
+				//@DA second source input for the concat 
+//@DA			MyInpMoveDesignator.setPath("$ComIbmMessageAssembly_inmodel/inmodel/input1"); 
+				MyInp2FunctionDesignator.setPath("$ComIbmMessageAssembly_"+metaData.docHandler.getModel().gdmDef.sourceMessage+"/"            
+			                                                         +metaData.docHandler.getModel().gdmDef.sourceMessage+"/" 
+			                                                    //@DA for a concat get the second input from the assignValue field     
+			                                                         +metaData.docHandler.getModel().getFieldMapping().get(i).assignValue);		
+					
+				MyFunction.getInput().add(MyInp2FunctionDesignator);
+
+					
+//@DA			MyOutMoveDesignator.setPath("$ComIbmMessageAssembly_outmodel/outmodel/output1"); 
+				MyOutFunctionDesignator.setPath("$ComIbmMessageAssembly_"+metaData.docHandler.getModel().gdmDef.targetMessage+"/"              
+			                                                         +metaData.docHandler.getModel().gdmDef.targetMessage+"/"              
+							                                         +metaData.docHandler.getModel().getFieldMapping().get(i).targetField);				
+				
+				MyFunction.setOutput(MyOutFunctionDesignator);
+//@DA after output designated need to add
+//@DA            <param name="string1" value="$input8"/>
+//@DA            <param name="string2" value="$input9"/>
+
+				Param MyFunctionParam1 = new Param();		
+				MyFunctionParam1.setName("string1");
+				MyFunctionParam1.setValue("$"+metaData.docHandler.getModel().getFieldMapping().get(i).sourceField);
+
+				MyFunction.getParam().add(MyFunctionParam1);
+				
+				Param MyFunctionParam2 = new Param();		
+				MyFunctionParam2.setName("string2");
+				MyFunctionParam2.setValue("$"+metaData.docHandler.getModel().getFieldMapping().get(i).assignValue);
+
+				MyFunction.getParam().add(MyFunctionParam2);
+				
+				JAXBElement<Function> FunctionJaxbEl = factory.createFunction(MyFunction);/*@DA3*/			
+							
+				MyMapDecl.getNested().add(FunctionJaxbEl);
+				
+				
+			}
 		
-		} else { // else for if move or assign
-			// do a move to perform the first mapping from input to output	
+		} else { // else for if move or assign/concat - default to move
+			// do a move to perform the mapping from input to output	
 			
 			//@DA metaData.docHandler.getModel().getFieldMapping().get(i).description to replace "uppercase"
 					

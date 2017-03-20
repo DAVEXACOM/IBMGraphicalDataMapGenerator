@@ -3,6 +3,7 @@
     <output path="/Output_Model.xsd"/>
     <namespaces>
         <namespace kind="supplement" prefix="io" uri="http://www.da.com/modelSchema"/>
+        <namespace kind="extension" prefix="fn" uri="http://www.w3.org/2005/xpath-functions"/>
     </namespaces>
     <generation engine="xquery"/>
     <mappingDeclaration name="Input_To_Output_ByHand">
@@ -27,5 +28,12 @@
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input3"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output3"/>
         </move>
+        <function ref="fn:concat">
+            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input8" var="input8"/>
+            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input9" var="input9"/>
+            <output path="$ComIbmMessageAssembly_outmodel/outmodel/output9"/>
+            <param name="string1" value="$input8"/>
+            <param name="string2" value="$input9"/>
+        </function>
     </mappingDeclaration>
 </mappingRoot>

@@ -4,7 +4,14 @@
       <sequence>
         <element name="output1" type="string"></element>
         <element name="output2" type="string"></element> 
-        <element name="output3" type="string"></element>                       
+        <element name="output3" type="string"></element>
+        <element name="output4" type="string"></element>
+        <element name="output5" type="string"></element> 
+        <element name="output6" type="string"></element>                       
+        <element name="output7" type="string"></element>
+        <element name="output8" type="string"></element> 
+        <element name="output9" type="string"></element>                       
+                               
       </sequence>
     </complexType>
   </element>    

@@ -1,5 +1,11 @@
 Input_Model.xsd,inmodel,XMLNSC,Output_Model.xsd,outmodel,XMLNSC
 input1,output1,move,,uppercase
 input2,output2,assign,10,constant value 10
-input3,output3,move,,substring to 20
+input3,output3,assign,11,constant value 11
+input4,output4,assign,12,constant value 12
+input5,output5,move,,substring 0 to 13
+input6,output6,move,,uppercase and substring 2
+input7,output7,move,,straight move
+input8,output8,concat,input9,additionally add inputx by hand
+input9,output9,move,,substring 10 to 20
 
