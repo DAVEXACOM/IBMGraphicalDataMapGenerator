@@ -15,25 +15,22 @@
             <output path="$ComIbmMessageAssembly_outmodel/Properties"/>
         </move>
         <move>
-            <documentation description="uppercase"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input1"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output1"/>
         </move>
         <assign value="10">
-            <documentation description="constant value 10"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output2"/>
         </assign>
-        <move>
-            <documentation description="substring to 20"/>
-            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input3"/>
-            <output path="$ComIbmMessageAssembly_outmodel/outmodel/output3"/>
-        </move>
         <function ref="fn:concat">
-            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input8" var="input8"/>
-            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input9" var="input9"/>
-            <output path="$ComIbmMessageAssembly_outmodel/outmodel/output9"/>
-            <param name="string1" value="$input8"/>
-            <param name="string2" value="$input9"/>
+            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input6" var="input6"/>
+            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input7" var="input7"/>
+            <output path="$ComIbmMessageAssembly_outmodel/outmodel/output7"/>
+            <param name="string1" value="$input6"/>
+            <param name="string2" value="$input7"/>
         </function>
+        <move>
+            <input path="$ComIbmMessageAssembly_inmodel/inmodel/input4"/>
+            <output path="$ComIbmMessageAssembly_outmodel/outmodel/output4"/>
+        </move>
     </mappingDeclaration>
 </mappingRoot>

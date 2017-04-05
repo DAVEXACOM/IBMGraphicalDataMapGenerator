@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" targetNamespace="default" version="8.0.5.0" mainMap="true">
-    <documentation description="generated via JAXB map generation API at Wed Mar 29 15:21:50 AEDT 2017"/>
+    <documentation description="generated via JAXB map generation API at Wed Apr 05 20:05:12 AEST 2017"/>
     <input path="/Input_Model.xsd"/>
     <output path="/Output_Model.xsd"/>
     <generation engine="xquery"/>
-    <mappingDeclaration name="inmodel_outmodel">
+    <mappingDeclaration name="inmodel_outmodel_fromJSON">
         <input namespace="http://www.da.com/modelSchema" path="mb:msg(inmodel,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_inmodel"/>
         <output namespace="http://www.da.com/modelSchema" path="mb:msg(outmodel,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_outmodel"/>
         <move>
@@ -30,22 +30,22 @@
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output4"/>
         </assign>
         <move>
-            <documentation description="substring 0 to 13"/>
+            <documentation description="uppercase"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input5"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output5"/>
         </move>
         <move>
-            <documentation description="uppercase and substring 2"/>
+            <documentation description="uppercase"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input6"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output6"/>
         </move>
         <move>
-            <documentation description="straight move"/>
+            <documentation description="uppercase"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input7"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output7"/>
         </move>
         <function ref="fn:concat">
-            <documentation description="additionally add inputx by hand"/>
+            <documentation description="add additional inputx"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input8"/>
             <input path="$ComIbmMessageAssembly_inmodel/inmodel/input9"/>
             <output path="$ComIbmMessageAssembly_outmodel/outmodel/output8"/>

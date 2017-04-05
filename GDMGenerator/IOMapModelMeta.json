@@ -1,0 +1,24 @@
+{"mapping_context": 
+ {
+  "sourceSchema": "Input_Model.xsd",
+  "sourceMessage": "inmodel",
+  "sourceParser": "XMLNSC",
+  "targetSchema": "Output_Model.xsd",
+  "targetMessage": "outmodel",
+  "targetParser": "XMLNSC",
+  "mapping_list":{
+	    "mapping_item": [       
+	                      {"input": "input1", "output": "output1", "action": "move","value": "","description":"uppercase"},
+	                      {"input": "input2", "output": "output2", "action": "assign","value": "10","description":"constant value 10"},
+	                      {"input": "input3", "output": "output3", "action": "assign","value": "11","description":"constant value 11"},
+	                      {"input": "input4", "output": "output4", "action": "assign","value": "12","description":"constant value 12"},
+	                      {"input": "input5", "output": "output5", "action": "move","value": "","description":"uppercase"},
+	                      {"input": "input6", "output": "output6", "action": "move","value": "","description":"uppercase"},
+	                      {"input": "input7", "output": "output7", "action": "move","value": "","description":"uppercase"},
+	                      {"input": "input8", "output": "output8", "action": "concat","value": "input9","description":"add additional inputx"},
+	                      {"input": "input9", "output": "output9", "action": "move","value": "","description":"substring 10 to 20"}
+	                    ]
+
+                  }
+ }
+}
