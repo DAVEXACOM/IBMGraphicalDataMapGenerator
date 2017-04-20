@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" targetNamespace="default" version="8.0.5.0" mainMap="true">
-    <documentation description="generated via JAXB map generation API at Wed Apr 05 20:05:12 AEST 2017"/>
+    <documentation description="generated via JAXB map generation API at Thu Apr 20 10:45:56 AEST 2017"/>
     <input path="/Input_Model.xsd"/>
     <output path="/Output_Model.xsd"/>
+    <namespaces>
+        <namespace prefix="io" uri="http://www.da.com/modelSchema" kind="supplement"/>
+        <namespace prefix="fn" uri="http://www.w3.org/2005/xpath-functions" kind="extension"/>
+    </namespaces>
     <generation engine="xquery"/>
     <mappingDeclaration name="inmodel_outmodel_fromJSON">
         <input namespace="http://www.da.com/modelSchema" path="mb:msg(inmodel,assembly,XMLNSC,Properties)" var="ComIbmMessageAssembly_inmodel"/>

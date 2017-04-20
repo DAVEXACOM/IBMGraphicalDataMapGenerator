@@ -26,6 +26,8 @@ import com.ibm.msl.MappingRoot;
 import com.ibm.msl.Move;
 import com.ibm.msl.Assign;
 import com.ibm.msl.Function;
+import com.ibm.msl.Namespace;
+import com.ibm.msl.Namespaces;
 import com.ibm.msl.ObjectFactory;
 import com.ibm.msl.Param;
 import com.ibm.msl.Task;
@@ -225,6 +227,26 @@ public class ParseMetaSerialMSL {
 		myOutMD.setPath("/"+metaData.docHandler.getModel().gdmDef.targetSchema);		
 //@DA	myOutMD.setPath("/Output_Model.xsd");
 		MyMapRoot.getOutput().add(myOutMD);		
+
+//@DAnsl add the namespaces list 		
+		
+		Namespaces myNSlist = new Namespaces();
+		Namespace firstNS = new Namespace();
+		firstNS.setKind("supplement");
+		firstNS.setPrefix("io");
+		firstNS.setUri("http://www.da.com/modelSchema");
+		
+		myNSlist.getNamespace().add(firstNS); 
+		
+		Namespace secondNS = new Namespace();
+		secondNS.setKind("extension");
+		secondNS.setPrefix("fn");
+		secondNS.setUri("http://www.w3.org/2005/xpath-functions");
+
+		myNSlist.getNamespace().add(secondNS); 
+						
+        MyMapRoot.setNamespaces(myNSlist); //@DA add nsl end
+		
 		
 		Generation MyMapGen = new Generation();
 		MyMapGen.setEngine("xquery");
