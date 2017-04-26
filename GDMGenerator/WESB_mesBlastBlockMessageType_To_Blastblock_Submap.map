@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map:businessObjectMap xmlns:Blastblock="http://MQ2BlastblockNotificationPublisher/BlastblockCMM" xmlns:MD_mesBlastBlockMessageType_To_Blastblock_Submap="http://MM_MQ2_Publisher_V1.2" xmlns:map="http://www.ibm.com/xmlns/prod/websphere/wbiserver/map/6.0.0" xmlns:mesBlastBlockMessageType="http://daltmines.net/services" targetNamespace="http://MM_MQ2_Publisher_V1.2">
+  <map:name>MD_mesBlastBlockMessageType_To_Blastblock_Submap</map:name>
+  <map:inputBusinessObjectVariable businessObjectRef="mesBlastBlockMessageType:mesBlastBlockMessageType" name="mesBlastBlockMessageType"/>
+  <map:outputBusinessObjectVariable businessObjectRef="Blastblock:Blastblock" name="Blastblock"/>
+  <map:propertyMap executionOrder="1">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/sourceSystemId"/>
+      <map:output businessObjectVariableRef="Blastblock" property="sourceSystemId"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="2">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/mineSiteCode"/>
+      <map:output businessObjectVariableRef="Blastblock" property="Bench/Pit/Mine/Code"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="3">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/businessId"/>
+      <map:output businessObjectVariableRef="Blastblock" property="businessId"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="4">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/description"/>
+      <map:output businessObjectVariableRef="Blastblock" property="description"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="5">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/pitCode"/>
+      <map:output businessObjectVariableRef="Blastblock" property="Bench/Pit/Code"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="6">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/benchCode"/>
+      <map:output businessObjectVariableRef="Blastblock" property="Bench/Code"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="7">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/oreTypeCode"/>
+      <map:output businessObjectVariableRef="Blastblock" property="OreTypeGeoType/OreType"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="8">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/status"/>
+      <map:output businessObjectVariableRef="Blastblock" property="Status"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="9">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/initialDensity"/>
+      <map:output businessObjectVariableRef="Blastblock" property="InitialDensity"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="10">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/initialTonnes"/>
+      <map:output businessObjectVariableRef="Blastblock" property="InitialTonnes"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="11">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/initialBcm"/>
+      <map:output businessObjectVariableRef="Blastblock" property="initialBcm"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="12">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/extBusinessId"/>
+      <map:output businessObjectVariableRef="Blastblock" property="extBusinessId"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="13">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/previousStatus"/>
+      <map:output businessObjectVariableRef="Blastblock" property="previousStatus"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="14">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="sourceSystemName"/>
+      <map:output businessObjectVariableRef="Blastblock" property="sourceSystemName"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="15">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="modifiedDate"/>
+      <map:output businessObjectVariableRef="Blastblock" property="modifiedDate"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="16">
+    <map:move>
+      <map:input businessObjectVariableRef="mesBlastBlockMessageType" property="mesBlastBlockDetail/previousTonnes"/>
+      <map:output businessObjectVariableRef="Blastblock" property="previousTonnes"/>
+    </map:move>
+  </map:propertyMap>
+  <map:propertyMap executionOrder="17">
+     <map:customAssignment>
+      <map:output businessObjectVariableRef="Blastblock" property="mineSubSiteCode"/>
+      <map:javaCode>java.util.Date __ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted = (java.util.Date)ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted;&#xD;
+java.util.Date __result__1;&#xD;
+{// current date and time&#xD;
+	__result__1 = new java.util.Date();&#xD;
+}&#xD;
+java.util.Date ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted = __result__1;&#xD;
+
+//@generated:com.ibm.wbit.activity.ui
+//&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>
+//&lt;com.ibm.wbit.activity:CompositeActivity xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:com.ibm.wbit.activity=&quot;http:///com/ibm/wbit/activity.ecore&quot; name=&quot;ActivityMethod&quot;>
+//  &lt;exceptions>
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:JavaElementType&quot; name=&quot;java.lang.Exception&quot;/>
+//  &lt;/exceptions>
+//  &lt;executableElements xsi:type=&quot;com.ibm.wbit.activity:LibraryActivity&quot; name=&quot;current date and time&quot; description=&quot;The current date and time&quot; category=&quot;date&quot; template=&quot;&amp;lt;%return%> new java.util.Date();&quot;>
+//    &lt;result name=&quot;dateTimeNow&quot; displayName=&quot;date time now&quot;>
+//      &lt;dataOutputs target=&quot;//@executableElements.1&quot;/>
+//      &lt;type xsi:type=&quot;com.ibm.wbit.activity:JavaElementType&quot; name=&quot;java.util.Date&quot;/>
+//    &lt;/result>
+//  &lt;/executableElements>
+//  &lt;executableElements xsi:type=&quot;com.ibm.wbit.activity:Expression&quot; dataInputs=&quot;//@executableElements.0/@result/@dataOutputs.0&quot; value=&quot;ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted&quot; localVariable=&quot;//@localVariables.0&quot; variable=&quot;true&quot;>
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:XSDElementType&quot; name=&quot;dateTime&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot;/>
+//  &lt;/executableElements>
+//  &lt;localVariables name=&quot;ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted&quot;>
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:XSDElementType&quot; name=&quot;dateTime&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot;/>
+//  &lt;/localVariables>
+//  &lt;executableGroups executableElements=&quot;//@executableElements.0 //@executableElements.1&quot;/>
+//&lt;/com.ibm.wbit.activity:CompositeActivity>
+//@generated:end
+//!SMAP!*S WBIACTDBG&#xD;
+//!SMAP!*L&#xD;
+//!SMAP!1:2,4&#xD;
+//!SMAP!2:6,1&#xD;
+//!SMAP!1000000:34,1</map:javaCode>
+    </map:customAssignment>
+  </map:propertyMap>
+</map:businessObjectMap>

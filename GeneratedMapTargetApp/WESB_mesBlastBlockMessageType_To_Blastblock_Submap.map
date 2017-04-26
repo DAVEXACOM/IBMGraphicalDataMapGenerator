@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" domainIDExtension="mb" targetNamespace="default" version="8.0.5.0" mainMap="false">
+    <documentation description="generated via JAXB map generation API at Wed Apr 26 13:13:08 AEST 2017"/>
+    <input path="/mesBlastBlockMessageType.xsd"/>
+    <output path="/Blastblock.xsd"/>
+    <imports>
+        <import kind="java" namespace="xalan://com.da.javaholder.placeholder" location="com.da.javaholder.placeholder"/>
+    </imports>
+    <namespaces>
+        <namespace prefix="placeholder" uri="xalan://com.da.javaholder.placeholder" kind="extension"/>
+        <namespace prefix="in" uri="http://daltmines.net/services" kind="supplement"/>
+        <namespace prefix="out" uri="http://MQ2BlastblockNotificationPublisher/BlastblockCMM" kind="supplement"/>
+    </namespaces>
+    <generation engine="xquery"/>
+    <mappingDeclaration name="WESB_mesBlastBlockMessageType_To_Blastblock_Submap">
+        <input namespace="http://daltmines.net/services" path="type('mesBlastBlockMessageType')"/>
+        <output namespace="http://MQ2BlastblockNotificationPublisher/BlastblockCMM" path="type('Blastblock')"/>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/sourceSystemId"/>
+            <output path="sourceSystemId"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/mineSiteCode"/>
+            <output path="Bench/Pit/Mine/Code"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/businessId"/>
+            <output path="businessId"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/description"/>
+            <output path="description"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/pitCode"/>
+            <output path="Bench/Pit/Code"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/benchCode"/>
+            <output path="Bench/Code"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/oreTypeCode"/>
+            <output path="OreTypeGeoType/OreType"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/status"/>
+            <output path="Status"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/initialDensity"/>
+            <output path="InitialDensity"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/initialTonnes"/>
+            <output path="InitialTonnes"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/initialBcm"/>
+            <output path="initialBcm"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/extBusinessId"/>
+            <output path="extBusinessId"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/previousStatus"/>
+            <output path="previousStatus"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="sourceSystemName"/>
+            <output path="sourceSystemName"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="modifiedDate"/>
+            <output path="modifiedDate"/>
+        </move>
+        <move>
+            <documentation description="from WESB BO"/>
+            <input path="mesBlastBlockDetail/previousTonnes"/>
+            <output path="previousTonnes"/>
+        </move>
+        <customFunction lang="java" ref="placeholder:sampleTransform">
+            <documentation description="Java snippet from WESB BO">java.util.Date __ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted = (java.util.Date)ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted;&#xD;
+java.util.Date __result__1;&#xD;
+{// current date and time&#xD;
+	__result__1 = new java.util.Date();&#xD;
+}&#xD;
+java.util.Date ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted = __result__1;&#xD;
+
+//@generated:com.ibm.wbit.activity.ui
+//&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+//&lt;com.ibm.wbit.activity:CompositeActivity xmi:version=&quot;2.0&quot; xmlns:xmi=&quot;http://www.omg.org/XMI&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:com.ibm.wbit.activity=&quot;http:///com/ibm/wbit/activity.ecore&quot; name=&quot;ActivityMethod&quot;&gt;
+//  &lt;exceptions&gt;
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:JavaElementType&quot; name=&quot;java.lang.Exception&quot;/&gt;
+//  &lt;/exceptions&gt;
+//  &lt;executableElements xsi:type=&quot;com.ibm.wbit.activity:LibraryActivity&quot; name=&quot;current date and time&quot; description=&quot;The current date and time&quot; category=&quot;date&quot; template=&quot;&amp;lt;%return%&gt; new java.util.Date();&quot;&gt;
+//    &lt;result name=&quot;dateTimeNow&quot; displayName=&quot;date time now&quot;&gt;
+//      &lt;dataOutputs target=&quot;//@executableElements.1&quot;/&gt;
+//      &lt;type xsi:type=&quot;com.ibm.wbit.activity:JavaElementType&quot; name=&quot;java.util.Date&quot;/&gt;
+//    &lt;/result&gt;
+//  &lt;/executableElements&gt;
+//  &lt;executableElements xsi:type=&quot;com.ibm.wbit.activity:Expression&quot; dataInputs=&quot;//@executableElements.0/@result/@dataOutputs.0&quot; value=&quot;ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted&quot; localVariable=&quot;//@localVariables.0&quot; variable=&quot;true&quot;&gt;
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:XSDElementType&quot; name=&quot;dateTime&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot;/&gt;
+//  &lt;/executableElements&gt;
+//  &lt;localVariables name=&quot;ServiceMessageObject_1_body_createprocessAuthoritiesToLoad_AuthoritiesToLoad_AuthoritiesToLoad_AuthorityToLoad1_DateGranted&quot;&gt;
+//    &lt;type xsi:type=&quot;com.ibm.wbit.activity:XSDElementType&quot; name=&quot;dateTime&quot; namespace=&quot;http://www.w3.org/2001/XMLSchema&quot;/&gt;
+//  &lt;/localVariables&gt;
+//  &lt;executableGroups executableElements=&quot;//@executableElements.0 //@executableElements.1&quot;/&gt;
+//&lt;/com.ibm.wbit.activity:CompositeActivity&gt;
+//@generated:end
+//!SMAP!*S WBIACTDBG&#xD;
+//!SMAP!*L&#xD;
+//!SMAP!1:2,4&#xD;
+//!SMAP!2:6,1&#xD;
+//!SMAP!1000000:34,1</documentation>
+            <output path="mineSubSiteCode"/>
+        </customFunction>
+    </mappingDeclaration>
+</mappingRoot>
